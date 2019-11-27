@@ -1,0 +1,24 @@
+{
+    "despacho_santiago": {
+		"label": "Despacho a Santiago",
+		"description": "Entrega de 5 días hábiles",
+    "conditions": "(in_array({{shipto.city}}, array('COLINA','LAMPA','TILTIL','CALERA DE TANGO','BUIN','PAINE','MELIPILLA','ALHUÉ','CURACAVÍ','MARÍA PINTO','SAN PEDRO','TALAGANTE','PEÑAFLOR','EL MONTE','ISLA DE MAIPO','PIRQUE','SAN JOSÉ DE MAIPO', 'QUILICURA','PUDAHUEL','CONCHALÍ','HUECHURABA','RENCA','QUINTA NORMAL','CERRO NAVIA','LO PRADO','INDEPENDENCIA','RECOLETA','ESTACIÓN CENTRAL','MAIPÚ','CERRILLOS','SAN BERNARDO','PADRE HURTADO','PEÑALOLÉN','LA GRANJA','SAN JOAQUÍN','MACUL','LA FLORIDA','LA CISTERNA','EL BOSQUE','SAN RAMÓN','LO ESPEJO','SAN MIGUEL','PEDRO AGUIRRE CERDA','LA PINTANA','PUENTE ALTO','PROVIDENCIA','SANTIAGO','LAS CONDES','LA REINA','VITACURA','LO BARNECHEA','ÑUÑOA'))) && ({cart.price-tax+discount} >= 20000)",
+		"fees": "({cart.price-tax+discount} >= 20000 and {cart.price-tax+discount} < 30000) ? 5000:0"
+},
+    
+    
+	  "despacho_santiago_especial": {
+	  "label": "Despacho a Santiago",
+		"description": "Entrega de 5 días hábiles",
+    "conditions": "(in_array({{shipto.city}}, array('COLINA','CARMEN ALTO','LAMPA','BUIN','PAINE','MELIPILLA','QUILICURA','PUDAHUEL','CONCHALÍ','HUECHURABA','RENCA','QUINTA NORMAL','CERRO NAVIA','LO PRADO','INDEPENDENCIA','RECOLETA','ESTACIÓN CENTRAL','MAIPÚ','CERRILLOS','SAN BERNARDO','PEÑALOLÉN','LA GRANJA','SAN JOAQUÍN','MACUL','LA FLORIDA','LA CISTERNA','EL BOSQUE','SAN RAMÓN','LO ESPEJO','SAN MIGUEL','PEDRO AGUIRRE CERDA','LA PINTANA','PUENTE ALTO','PROVIDENCIA','LAS CONDES','SANTIAGO','ÑUÑOA','LO BARNECHEA','LA REINA','VITACURA'))) && ({cart.price-tax+discount} >= 30000)",
+		"fees": "0"
+},
+  
+  
+    "despacho_regiones": {
+		"label": "Despacho a Regiones",
+		"description": "Entrega de 7 días hábiles",
+    "conditions": "(in_array({{shipto.region_id}}, array('5','6',))) && ({cart.price-tax+discount} >= 30000)",
+		"fees": "0"
+	}
+  }
